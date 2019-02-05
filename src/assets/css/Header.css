@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.header .logo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 146px;
+  height: 160px;
+  display: block;
+  margin: auto;
+}
+
+.col-4:first-of-type .logo {
+  background-image: url(../images/dog-bowl.png);
+}
+
+.col-4:last-of-type .logo {
+  background-image: url(../images/dog-bone.png);
+}
+
+.header .title {
+  font-family: Itim, cursive;
+}
+
+@media (max-width: 767px) {
+  .header .logo {
+    width: 63px;
+    height: 69px;
+  }
+
+  .header .title {
+    font-size: 22px;
+  }
+
+}
