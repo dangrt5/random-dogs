@@ -4,6 +4,9 @@
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
+    border-radius: 15px;
+    border: 1px solid black;
+
 }
 
 .cardTitle {
@@ -14,9 +17,10 @@
 }
 
 .cardImg {
+    padding-top: 10%;
+    padding-bottom: 10%;
     object-fit: contain;
-    height: 300px;
-    width: 235PX;
+    height: 250px;
 }
 
 .img {
