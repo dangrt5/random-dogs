@@ -5,3 +5,8 @@ const Product = require('./model');
 exports.test = function (req, res) {
     res.send('Greetings from the Test controller!');
 };
+
+exports.breeds = function (req, res) {
+    console.log("HELLOOOOO");
+    res.send({"hello": "hello"})
+};

@@ -6,5 +6,6 @@ const controller = require('./controller');
 
 // a simple test url to check that all of our files are communicating correctly.
 router.get('/test', controller.test);
+router.get('/breeds', controller.breeds);
 
 module.exports = router;
