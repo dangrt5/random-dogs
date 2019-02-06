@@ -1,52 +1,35 @@
-import React, { Component } from 'react'; 
+import React, { Component } from 'react';
 import '../assets/css/DogPics.css';
-import axios from 'axios';
 
 class DogPics extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state = {
-            dogObj: [],
-        }
-
     }
-    componentDidMount = async ()=> {
-       await axios.get("https://dog.ceo/api/breeds/image/random/4").then( (resp) => {
-            const dogImgArray = resp.data.message;
-            const dogArray = [];
-            dogImgArray.map( (item, index)=> {
-                let num = 31;
-                let dogName = '';
-                dogName += item[30].toUpperCase()
-                while(item[num] !== '/') {
-                    dogName += item[num]; 
-                    num++;
-                }
-                return dogArray.push({dog: dogName, img: item});
-            })
-            this.setState({
-                dogObj: dogArray,
-            })
-            return
-       } )
+    componentDidMount() {
+        this.props.retrieveDogPhotos();
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps !== this.props) this.render();
     }
 
     render() {
-        const { dogObj } = this.state
-        const individualDog = dogObj.map( (item, index) => {
-             return (
-                    <div className="col-sm-12 col-md-6 col-lg-3" key={index}>
-                        <div className="individualCards">
-                            <div className="col-sm-12 text-center cardTitle">{item.dog}</div>
-                            <img src={item.img} alt={`Dog ${item.dog}`} className="col-sm-12 cardImg"/>
-                        </div>
+        const { dogObj } = this.props;
+        
+        const individualDog = dogObj.map((item, index) => {
+            return (
+                <div className="col-sm-12 col-md-6 col-lg-3">
+                    <div className="individualCards">
+                        <div className="col-sm-12 text-center cardTitle">{item.dog}</div>
+                        <img src={item.img} alt={`Dog ${item.dog}`} className="col-sm-12 cardImg"/>
                     </div>
-                )
-        })
+                </div>
+            )
+        });
         return (
-            <div className="container">   
+            <div className="container">
                 <div className="row">
-                   {individualDog}
+                    {individualDog}
                 </div>
             </div>
         )
