@@ -1,0 +1,32 @@
+.individualCards {
+    background-color:#DECAD8;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardTitle {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.cardImg {
+    object-fit: contain;
+    height: 300px;
+    width: 235PX;
+}
+
+.img {
+    background-size: contain;
+    height: 65%;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.cardFact {
+    height: 60px;
+
+}
