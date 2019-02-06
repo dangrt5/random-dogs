@@ -17,8 +17,8 @@ body {
 .header .logo {
   background-size: contain;
   background-repeat: no-repeat;
-  width: 146px;
-  height: 160px;
+  width: 120px;
+  height: 140px;
   display: block;
   margin: auto;
 }

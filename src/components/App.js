@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import DogPics from './DogPics'; 
+import DogPics from './DogPics';
 import Header from "./Header";
 import Footer from "./Footer";
-import DogFacts from './DogFacts';
+import DogFacts from './dogFacts';
 
 
 class App extends Component {
@@ -10,8 +10,8 @@ class App extends Component {
     return (
       <div className="container">
         <Header />
-        <DogFacts/>
-        <DogPics/>
+        <DogFacts />
+        <DogPics />
         <Footer />
       </div>
     );
