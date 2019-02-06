@@ -1,5 +1,5 @@
 .footer {
-  padding: 10px;
+  padding: 15px;
 }
 
 .footer form,
@@ -28,9 +28,26 @@
   font-weight: bolder;
 }
 
+.footer .buttons {
+  width: 25%;
+  margin: auto;
+}
+
+.footer .random-image,
+.footer .random-fact {
+  display: inline-block;
+  margin: auto;
+}
+
 .footer .btn {
-  width: 100%;
+  display: inline-block;
   color: black;
   font-weight: bolder;
   font-family: Open Sans;
+  margin: auto 5px;
+  outline: 0;
+}
+
+.footer .btn:focus {
+  outline: 0;
 }

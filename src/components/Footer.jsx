@@ -3,29 +3,20 @@ import "../assets/css/Footer.css";
 
 export default class Footer extends React.Component {
 
-    state = {
-        input: '',
-    }
-
-
-    handleInput = e => {
-        const { value } = e.currentTarget.value;
-        this.setState({ input: value })
-    }
-
-
     render() {
-        const { input } = this.state;
 
         return (
             <div className="footer row">
-                <form>
-                    <p>Select # of facts (1-4)</p>
-                    <div className="form-group">
-                        <input onChange={this.handleInput} type="text" value={input} />
+
+                <div className="col-12">
+                    <p>Generate new...</p>
+                    <div className="buttons">
+                        <button className="btn btn-lg btn-primary">Images</button>
+                        <button className='btn btn-lg btn-primary'>Random Fact</button>
                     </div>
-                    <button className='btn btn-lg btn-primary'>Generate</button>
-                </form>
+
+                </div>
+
             </div>
         )
     }
