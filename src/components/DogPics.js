@@ -18,15 +18,16 @@ class DogPics extends Component {
                 let num = 31;
                 let dogName = '';
                 dogName += item[30].toUpperCase()
-                while(item[num] != '/') {
+                while(item[num] !== '/') {
                     dogName += item[num]; 
                     num++;
                 }
-                dogArray.push({dog: dogName, img: item});
+                return dogArray.push({dog: dogName, img: item});
             })
             this.setState({
                 dogObj: dogArray,
             })
+            return
        } )
     }
 
@@ -34,10 +35,10 @@ class DogPics extends Component {
         const { dogObj } = this.state
         const individualDog = dogObj.map( (item, index) => {
              return (
-                    <div className="col-sm-12 col-md-6 col-lg-3">
+                    <div className="col-sm-12 col-md-6 col-lg-3" key={index}>
                         <div className="individualCards">
                             <div className="col-sm-12 text-center cardTitle">{item.dog}</div>
-                            <img src={item.img} className="col-sm-12 cardImg"/>
+                            <img src={item.img} alt={`Dog ${item.dog}`} className="col-sm-12 cardImg"/>
                         </div>
                     </div>
                 )
