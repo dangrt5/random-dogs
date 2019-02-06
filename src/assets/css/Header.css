@@ -12,6 +12,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   padding: 10px;
+  padding-bottom: 0;
 }
 
 .header .logo {
