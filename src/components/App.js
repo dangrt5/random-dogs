@@ -17,24 +17,18 @@ class App extends Component {
       const dogImgArray = resp.data.message;
       const dogArray = [];
       dogImgArray.map((item, index) => {
-        let num = 31;
-        let dogName = '';
-        dogName += item[30].toUpperCase()
-        while (item[num] !== '/') {
-          dogName += item[num];
-          num++;
-        }
+        const dogName = item.match(/.+\/breeds\/(.+)\//)[1];
         dogArray.push({ dog: dogName, img: item });
-      })
-      this.setState({
-        dogObj: dogArray,
+        this.setState({
+          dogObj: dogArray,
+        })
       })
     })
   }
 
   render() {
     return (
-      <div className="container">
+      <div className="container" >
         <Header />
         <DogFacts />
         <DogPics dogObj={this.state.dogObj} retrieveDogPhotos={this.retrieveDogPhotos} />
