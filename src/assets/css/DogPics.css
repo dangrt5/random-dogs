@@ -1,11 +1,8 @@
 .individualCards {
     background-color:#DECAD8;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: center;
     border-radius: 15px;
     border: 1px solid black;
+    margin: 2.5%;
 
 }
 
@@ -17,8 +14,8 @@
 }
 
 .cardImg {
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     object-fit: contain;
     height: 250px;
 }
