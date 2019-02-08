@@ -18,7 +18,7 @@ class DogPics extends Component {
         
         const individualDog = dogObj.map((item, index) => {
             return (
-                <div className="col-sm-12 col-md-6 col-lg-3">
+                <div className="col-sm-6 col-lg-3">
                     <div className="individualCards">
                         <div className="col-sm-12 text-center cardTitle">{item.dog}</div>
                         <img src={item.img} alt={`Dog ${item.dog}`} className="col-sm-12 cardImg"/>

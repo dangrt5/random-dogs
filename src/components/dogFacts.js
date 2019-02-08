@@ -11,9 +11,9 @@ constructor(props) {
     }
 }
     componentDidMount = async() => {
-        await axios.get("http://dog-api.kinduff.com/api/facts", {headers: {'Content-Type': 'application/x-www-form-urlencoded'}}).then( (resp) => {
-            console.log("What is the Dog Facts", resp);
-        })
+        // await axios.get("http://dog-api.kinduff.com/api/facts", {headers: {'Content-Type': 'application/x-www-form-urlencoded'}}).then( (resp) => {
+        //     console.log("What is the Dog Facts", resp);
+        // })
     }
 
 
